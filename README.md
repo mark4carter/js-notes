@@ -11,7 +11,7 @@
 
 <h2>this  ????</h2>
 <h4><strong>call-stack and call-site</strong></h4>
-```
+```javascript
 function baz() {
     // call-stack is: `baz`
     // so, our call-site is in the global scope
