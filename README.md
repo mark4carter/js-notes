@@ -1,5 +1,12 @@
 # js-notes
 
+<h3> Things I've learned recently </h3>
+<ul>
+    <li> A .click() event cannot be placed on a object that has not been created.  Its' better to use $(document).on("click", element, funciton() {}); <li>
+    <li> One on() function will not overwrite another, even if it's pointed at the same element, you must off() or they will both fire </li>
+    <li> To create a div (like a pop up), that covers all, is to create a parten div with position: relative, and the div inside to be position: absolute then use z-index.  Might be able to use both position: relative or absolute, but positions must be applied, or z-index does not work </li>
+
+
 -Notes taken from books
 
 <h3>Complier Theory</h3>
@@ -38,3 +45,4 @@ function foo() {
 
 baz(); // <-- call-site for `baz`
 ```
+
