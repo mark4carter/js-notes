@@ -11,10 +11,36 @@
 
 <h3>Complier Theory</h3>
 <ul>
-	<li>Tokenizing/Lexing</li>
+	<li>Tokenizing/Lexing - break up ('var', 'a', '=', '2', and ';')</li>
 	<li>Parsing</li>
 	<li>Code-Generation</li>
 </ul>
+
+<h2>Understanding Scope</h2>
+<ol>
+  <li>Engine: responsible for compliation and execution</li>
+  <li>Compiler: parsing and code-generation</li>
+  <li>Scope: collects and maintains a look-up list of all declared identifiers. </li>
+</ol>
+During `var a = 2;`
+<ol>
+  <li>Complier declares a variable if not declared already</li>
+  <li>Engine then looks up the variable in scopre and assigns to it, if found</li>
+</ol>
+
+LHS look-up is trying to find the varaible container(!= the value of container)
+RHS look-up is trying to find the value of a variable
+
+`function foo(a) {`
+`console.log( a );` The `a` is a RHS declaration
+`foo( 2 );` The foo(..) is a RHS declaration, looking for definition of foo
+
+also in 'foo( 2 )', the '2' is passed and a LHS is performed on the 'a', so it can place '2' in it's spot.
+
+<h2> Nested Scope </h2>
+
+A failed RHS error by the Engine will throw a `ReferenceError`.
+
 
 <h2>this  ????</h2>
 <h4><strong>call-stack and call-site</strong></h4>
